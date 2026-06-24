@@ -1,0 +1,1 @@
+device_name,config_type,vlan_id,interface_name,ip_address,subnet_mask,gateway_redundancy_mode,hsrp_vrrp_vip,priority,routing_protocol,destination_network,next_hop,description

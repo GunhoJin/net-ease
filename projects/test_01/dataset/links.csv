@@ -1,0 +1,13 @@
+link_id,device_a,port_a,device_b,port_b,link_type,speed,description
+LINK-001,R1,Serial1/3,R2,Serial1/3,WAN Serial,T1,WAN 직렬 링크 (R1-R2)
+LINK-002,L3-1,GigabitEthernet0/15,L3-2,GigabitEthernet0/15,Trunk,1G,L3 스위치 간 트렁크 피어링크
+LINK-003,L3-1,GigabitEthernet0/0,R1,FastEthernet2/0,L3 Uplink,1G,L3-1 e0 -> R1 f2/0 업링크
+LINK-004,L3-1,GigabitEthernet0/1,R2,FastEthernet2/0,L3 Uplink,1G,L3-1 e1 -> R2 f2/0 업링크
+LINK-005,L3-2,GigabitEthernet0/0,R1,FastEthernet2/1,L3 Uplink,1G,L3-2 e0 -> R1 f2/1 업링크
+LINK-006,L3-2,GigabitEthernet0/1,R2,FastEthernet2/1,L3 Uplink,1G,L3-2 e1 -> R2 f2/1 업링크
+LINK-007,L3-1,GigabitEthernet0/4,CiscoL2-1,GigabitEthernet0/0,Trunk,1G,L3-1 e4 -> CiscoL2-1 e0 다운링크
+LINK-008,L3-2,GigabitEthernet0/4,CiscoL2-1,GigabitEthernet0/1,Trunk,1G,L3-2 e4 -> CiscoL2-1 e1 다운링크 (이중화)
+LINK-009,L3-1,GigabitEthernet0/5,CiscoL2-2,GigabitEthernet0/0,Trunk,1G,L3-1 e5 -> CiscoL2-2 e0 다운링크
+LINK-010,L3-2,GigabitEthernet0/5,CiscoL2-2,GigabitEthernet0/1,Trunk,1G,L3-2 e5 -> CiscoL2-2 e1 다운링크 (이중화)
+LINK-011,L3-1,GigabitEthernet0/6,CiscoL2-3,GigabitEthernet0/0,Trunk,1G,L3-1 e6 -> CiscoL2-3 e0 다운링크
+LINK-012,L3-2,GigabitEthernet0/6,CiscoL2-3,GigabitEthernet0/1,Trunk,1G,L3-2 e6 -> CiscoL2-3 e1 다운링크 (이중화)

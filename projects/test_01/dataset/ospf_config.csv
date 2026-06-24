@@ -1,0 +1,9 @@
+device_name,ospf_process_id,router_id,interface_name,area_id,network_type,priority,cost,passive_interface,description
+L3-1,1,10.10.10.2,Vlan10,0,broadcast,110,10,no,사용자 VLAN Area 0 (L3-1 Active 우선)
+L3-2,1,10.10.10.3,Vlan10,0,broadcast,90,10,no,사용자 VLAN Area 0 (L3-2 Standby)
+L3-1,1,10.10.10.2,Vlan20,0,broadcast,110,10,no,서버 VLAN Area 0 (L3-1 Active 우선)
+L3-2,1,10.10.10.3,Vlan20,0,broadcast,90,10,no,서버 VLAN Area 0 (L3-2 Standby)
+L3-1,1,10.10.10.2,Vlan30,0,broadcast,110,20,no,보이스 VLAN Area 0 (L3-1 Active 우선)
+L3-2,1,10.10.10.3,Vlan30,0,broadcast,90,20,no,보이스 VLAN Area 0 (L3-2 Standby)
+L3-1,1,10.10.10.2,Vlan99,0,broadcast,0,100,yes,관리 VLAN (passive-interface 광고만)
+L3-2,1,10.10.10.3,Vlan99,0,broadcast,0,100,yes,관리 VLAN (passive-interface 광고만)

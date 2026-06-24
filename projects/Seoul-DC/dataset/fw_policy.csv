@@ -1,0 +1,5 @@
+policy_id,device_name,policy_name,src_intf,dst_intf,src_subnet,dst_subnet,service,action,nat_enable,nat_type,description
+1,FW-EDGE-01,ALLOW_SERVER_TO_INTERNET,port3,port2,10.0.10.0/24,0.0.0.0/0,ALL,accept,enable,outbound,서버존 인터넷 아웃바운드 허용
+2,FW-EDGE-01,ALLOW_USER_TO_INTERNET,port3,port2,10.0.30.0/24,0.0.0.0/0,HTTP_HTTPS,accept,enable,outbound,사용자존 웹 아웃바운드만 허용
+3,FW-EDGE-01,ALLOW_DB_TO_SERVER,port3,port3,10.0.20.0/24,10.0.10.0/24,MYSQL,accept,disable,,DB존에서 서버존으로 DB 트래픽 허용(내부망 NAT 불필요)
+4,FW-EDGE-01,DENY_USER_TO_DB,port3,port3,10.0.30.0/24,10.0.20.0/24,ALL,deny,disable,,사용자존에서 DB존 직접 접근 차단

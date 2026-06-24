@@ -1,0 +1,7 @@
+link_id,device_a,port_a,device_b,port_b,link_type,speed,description
+L001,CiscoL2-1,e14,L3-1,e14,,,
+L002,CiscoL2-1,e15,L3-2,e14,,,
+L003,CiscoL2-2,e14,L3-1,e15,,,
+L004,CiscoL2-2,e15,L3-2,e15,,,
+L005,L3-1,e0,R1,f0/0,,,
+L006,L3-1,e10,L3-2,e10,,,

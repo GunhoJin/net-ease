@@ -1,0 +1,5 @@
+vlan_id,vlan_name,purpose,site,description
+10,CCTV-VIDEO,Video,Campus,CCTV 영상 전송 전용 대역
+20,ACCESS-CTRL,Security,Campus,출입통제 시스템 전용 대역
+99,MANAGEMENT,Management,Campus,네트워크 장비 관리 대역
+100,SERVER-FARM,Infrastructure,Campus,서버 팜 대역

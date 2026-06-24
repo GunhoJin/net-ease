@@ -1,0 +1,8 @@
+vlan_id,vlan_name,purpose,site,description
+10,VLAN_SERVER,Server,Seoul-DC,서버존 VLAN
+20,VLAN_DB,Database,Seoul-DC,DB 서버 전용 VLAN
+30,VLAN_USER,User,Seoul-DC,사무실 사용자 단말 VLAN
+40,VLAN_VOICE,Voice,Seoul-DC,VoIP 전화기 VLAN
+99,VLAN_MGMT,Management,Seoul-DC,장비 관리용 VLAN
+100,VLAN_VIP,LoadBalancer,Seoul-DC,F5 VIP(가상서버) 대역 VLAN
+999,VLAN_NATIVE,Native,Seoul-DC,트렁크 네이티브 VLAN(미사용 권장)

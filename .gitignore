@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 디버그 / 임시 스크립트 (단일 언더스코어로 시작하는 것만, __init__ 제외)
+_[!_]*.py
+*.ipynb
+
+# 이미지 / 바이너리
+*.bmp
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.pt
+
+# 생성 결과물
+output/
+projects/*/output/
+
+# 스크린샷
+_screen*.png
+_screenshot*.png
+_result*.png
+_bbox*.png
+_crop*.png
+_sample*.png
+_new_model*.png
+
+# VS Code
+.vscode/

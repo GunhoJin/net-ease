@@ -1,0 +1,31 @@
+device_name,port_name,mode,access_vlan,trunk_allowed_vlans,native_vlan,port_status,description
+R1,FastEthernet2/0,routed,,,,enabled,L3-1 다운링크
+R1,FastEthernet2/1,routed,,,,enabled,L3-2 다운링크
+R1,Serial1/3,routed,,,,enabled,R2 연결
+R2,FastEthernet2/0,routed,,,,enabled,L3-1 다운링크
+R2,FastEthernet2/1,routed,,,,enabled,L3-2 다운링크
+R2,Serial1/3,routed,,,,enabled,R1 연결
+L3-1,GigabitEthernet0/0,routed,,,,enabled,R1 업링크
+L3-1,GigabitEthernet0/1,routed,,,,enabled,R2 업링크
+L3-1,GigabitEthernet0/4,trunk,,"10,20,30,99",999,enabled,CiscoL2-1 다운링크
+L3-1,GigabitEthernet0/5,trunk,,"10,20,30,99",999,enabled,CiscoL2-2 다운링크
+L3-1,GigabitEthernet0/6,trunk,,"10,20,30,99",999,enabled,CiscoL2-3 다운링크
+L3-1,GigabitEthernet0/15,trunk,,"10,20,30,99",999,enabled,L3-2 피어링크
+L3-2,GigabitEthernet0/0,routed,,,,enabled,R1 업링크
+L3-2,GigabitEthernet0/1,routed,,,,enabled,R2 업링크
+L3-2,GigabitEthernet0/4,trunk,,"10,20,30,99",999,enabled,CiscoL2-1 다운링크
+L3-2,GigabitEthernet0/5,trunk,,"10,20,30,99",999,enabled,CiscoL2-2 다운링크
+L3-2,GigabitEthernet0/6,trunk,,"10,20,30,99",999,enabled,CiscoL2-3 다운링크
+L3-2,GigabitEthernet0/15,trunk,,"10,20,30,99",999,enabled,L3-1 피어링크
+CiscoL2-1,GigabitEthernet0/0,trunk,,"10,20,30,99",999,enabled,L3-1 업링크
+CiscoL2-1,GigabitEthernet0/1,trunk,,"10,20,30,99",999,enabled,L3-2 업링크
+CiscoL2-1,GigabitEthernet0/2,access,10,,,enabled,사용자 단말 포트
+CiscoL2-1,GigabitEthernet0/3,access,30,,,enabled,VoIP 전화기 포트
+CiscoL2-2,GigabitEthernet0/0,trunk,,"10,20,30,99",999,enabled,L3-1 업링크
+CiscoL2-2,GigabitEthernet0/1,trunk,,"10,20,30,99",999,enabled,L3-2 업링크
+CiscoL2-2,GigabitEthernet0/2,access,10,,,enabled,사용자 단말 포트
+CiscoL2-2,GigabitEthernet0/3,access,30,,,enabled,VoIP 전화기 포트
+CiscoL2-3,GigabitEthernet0/0,trunk,,"10,20,30,99",999,enabled,L3-1 업링크
+CiscoL2-3,GigabitEthernet0/1,trunk,,"10,20,30,99",999,enabled,L3-2 업링크
+CiscoL2-3,GigabitEthernet0/2,access,10,,,enabled,사용자 단말 포트
+CiscoL2-3,GigabitEthernet0/3,access,30,,,enabled,VoIP 전화기 포트

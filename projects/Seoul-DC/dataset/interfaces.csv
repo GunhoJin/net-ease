@@ -1,0 +1,11 @@
+device_name,port_name,mode,access_vlan,trunk_allowed_vlans,native_vlan,port_status,description
+SW-CORE-01,GigabitEthernet1/0/1,trunk,,"10,20,99",999,enabled,FW-EDGE-01 업링크
+SW-CORE-01,GigabitEthernet1/0/2,trunk,,"10,20,30,40,99,100",999,enabled,SW-CORE-02 피어링크
+SW-CORE-01,TenGigabitEthernet1/1/1,trunk,,"10,20,30,40,99,100",999,enabled,SW-DIST-01 업링크
+SW-CORE-01,GigabitEthernet1/0/5,trunk,,"10,20,100",999,enabled,F5-LTM-01 연결
+SW-DIST-01,TenGigabitEthernet1/1/1,trunk,,"10,20,30,40,99,100",999,enabled,SW-CORE-01 업링크
+SW-DIST-01,TenGigabitEthernet1/1/2,trunk,,"10,20,30,40,99,100",999,enabled,SW-CORE-02 업링크(이중화)
+SW-DIST-01,GigabitEthernet1/0/10,trunk,,"30,40,99",999,enabled,SW-ACCESS-01 다운링크
+SW-ACCESS-01,GigabitEthernet1/0/24,trunk,,"30,40,99",999,enabled,SW-DIST-01 업링크
+SW-ACCESS-01,GigabitEthernet1/0/1,access,30,,,enabled,사무실 단말 포트 1
+SW-ACCESS-01,GigabitEthernet1/0/2,access,40,,,enabled,IP폰 포트(보이스 VLAN)

@@ -1,0 +1,13 @@
+device_name,device_type,vendor,model,mgmt_ip,mgmt_vlan,site,role,description
+FW-EDGE-01,Firewall,Fortinet,FortiGate 200F,10.0.0.2,99,Campus,Edge Firewall,캠퍼스 경계 방화벽 Active (외부→내부 정책제어)
+FW-EDGE-02,Firewall,Fortinet,FortiGate 200F,10.0.0.3,99,Campus,Edge Firewall,캠퍼스 경계 방화벽 Standby (HA 이중화)
+SW-CORE-01,L3 Switch,Cisco,Catalyst 9500,10.0.0.11,99,Campus,Core,코어 L3 스위치 Primary (VSS/StackWise)
+SW-CORE-02,L3 Switch,Cisco,Catalyst 9500,10.0.0.12,99,Campus,Core,코어 L3 스위치 Secondary (VSS/StackWise)
+SW-DIST-A1,L3 Switch,Cisco,Catalyst 9300,10.0.1.21,99,A동,Distribution,A동 분배 스위치 1단 10G 업링크
+SW-DIST-A2,L3 Switch,Cisco,Catalyst 9300,10.0.1.22,99,A동,Distribution,A동 분배 스위치 2단 포트 확장
+SW-DIST-B1,L3 Switch,Cisco,Catalyst 9300,10.0.2.21,99,B동,Distribution,B동 분배 스위치 1단 10G 업링크
+SW-DIST-B2,L2 Switch,Cisco,Catalyst 9300,10.0.2.22,99,B동,Distribution,B동 분배 스위치 2단 포트 확장
+SW-ACC-A1F,L2 Switch,Cisco,Catalyst 9200,10.0.1.31,99,A동,Access,A동 1층 액세스 스위치 (CCTV·출입통제)
+SW-ACC-A2F,L2 Switch,Cisco,Catalyst 9200,10.0.1.32,99,A동,Access,A동 2층 액세스 스위치 (CCTV·출입통제)
+SW-ACC-B1F,L2 Switch,Cisco,Catalyst 9200,10.0.2.31,99,B동,Access,B동 1층 액세스 스위치 (CCTV·출입통제)
+SW-ACC-B2F,L2 Switch,Cisco,Catalyst 9200,10.0.2.32,99,B동,Access,B동 2층 액세스 스위치 (CCTV·출입통제)

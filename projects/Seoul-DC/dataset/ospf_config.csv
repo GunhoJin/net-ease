@@ -1,0 +1,11 @@
+device_name,ospf_process_id,router_id,interface_name,area_id,network_type,priority,cost,passive_interface,description
+SW-CORE-01,1,10.0.10.2,Vlan10,0,broadcast,110,10,no,서버존 Area 0 (Backbone) - Active 우선
+SW-CORE-02,1,10.0.10.3,Vlan10,0,broadcast,90,10,no,서버존 Area 0 (Backbone) - Standby
+SW-CORE-01,1,10.0.10.2,Vlan20,0,broadcast,110,10,no,DB존 Area 0 (Backbone) - Active 우선
+SW-CORE-02,1,10.0.10.3,Vlan20,0,broadcast,90,10,no,DB존 Area 0 (Backbone) - Standby
+SW-CORE-01,1,10.0.10.2,Vlan30,10,broadcast,100,20,no,사용자존 Area 10 - Active 우선
+SW-CORE-02,1,10.0.10.3,Vlan30,10,broadcast,90,20,no,사용자존 Area 10 - Standby
+SW-CORE-01,1,10.0.10.2,Vlan100,20,broadcast,100,5,no,F5 VIP존 Area 20 - 저코스트(우선 경로)
+SW-CORE-02,1,10.0.10.3,Vlan100,20,broadcast,90,5,no,F5 VIP존 Area 20 - 저코스트(우선 경로)
+SW-CORE-01,1,10.0.10.2,Vlan99,0,broadcast,0,100,yes,관리 VLAN은 광고만 하고 OSPF 인접 형성은 막음(passive)
+SW-CORE-02,1,10.0.10.3,Vlan99,0,broadcast,0,100,yes,관리 VLAN은 광고만 하고 OSPF 인접 형성은 막음(passive)

@@ -1,0 +1,36 @@
+device_name,ospf_process_id,router_id,interface_name,area_id,network_type,priority,cost,passive_interface,description
+FW-EDGE-01,1,10.0.0.2,port3,0,point-to-point,1,10,No,코어1 업링크 (Active)
+FW-EDGE-01,1,10.0.0.2,port4,0,point-to-point,1,10,No,코어2 업링크 (Active)
+FW-EDGE-02,1,10.0.0.3,port3,0,point-to-point,1,20,No,코어1 업링크 (Standby - cost 높게)
+FW-EDGE-02,1,10.0.0.3,port4,0,point-to-point,1,20,No,코어2 업링크 (Standby - cost 높게)
+SW-CORE-01,1,10.0.0.11,GigabitEthernet1/0/1,0,point-to-point,1,10,No,FW-EDGE-01 다운링크
+SW-CORE-01,1,10.0.0.11,GigabitEthernet1/0/2,0,point-to-point,1,10,No,FW-EDGE-02 다운링크
+SW-CORE-01,1,10.0.0.11,TenGigabitEthernet1/0/1,0,point-to-point,1,5,No,코어2 VSS 피어링크 (최우선)
+SW-CORE-01,1,10.0.0.11,TenGigabitEthernet1/0/2,0,point-to-point,1,10,No,SW-DIST-A1 다운링크
+SW-CORE-01,1,10.0.0.11,TenGigabitEthernet1/0/3,0,point-to-point,1,10,No,SW-DIST-A2 다운링크
+SW-CORE-01,1,10.0.0.11,TenGigabitEthernet1/0/4,0,point-to-point,1,10,No,SW-DIST-B1 다운링크
+SW-CORE-01,1,10.0.0.11,Vlan99,0,broadcast,1,10,Yes,관리 SVI (passive)
+SW-CORE-01,1,10.0.0.11,Vlan100,0,broadcast,1,10,Yes,서버팜 SVI (passive)
+SW-CORE-02,1,10.0.0.12,GigabitEthernet1/0/1,0,point-to-point,1,10,No,FW-EDGE-01 다운링크
+SW-CORE-02,1,10.0.0.12,GigabitEthernet1/0/2,0,point-to-point,1,10,No,FW-EDGE-02 다운링크
+SW-CORE-02,1,10.0.0.12,TenGigabitEthernet1/0/1,0,point-to-point,1,5,No,코어1 VSS 피어링크 (최우선)
+SW-CORE-02,1,10.0.0.12,TenGigabitEthernet1/0/2,0,point-to-point,1,10,No,SW-DIST-A1 다운링크
+SW-CORE-02,1,10.0.0.12,TenGigabitEthernet1/0/3,0,point-to-point,1,10,No,SW-DIST-A2 다운링크
+SW-CORE-02,1,10.0.0.12,TenGigabitEthernet1/0/4,0,point-to-point,1,10,No,SW-DIST-B1 다운링크
+SW-CORE-02,1,10.0.0.12,Vlan99,0,broadcast,1,10,Yes,관리 SVI (passive)
+SW-CORE-02,1,10.0.0.12,Vlan100,0,broadcast,1,10,Yes,서버팜 SVI (passive)
+SW-DIST-A1,1,10.0.1.21,TenGigabitEthernet1,0,point-to-point,1,10,No,코어1 업링크
+SW-DIST-A1,1,10.0.1.21,TenGigabitEthernet2,0,point-to-point,1,10,No,코어2 업링크
+SW-DIST-A1,1,10.0.1.21,Vlan10,0,broadcast,1,10,Yes,CCTV SVI (passive - HSRP VIP 10.1.10.1)
+SW-DIST-A1,1,10.0.1.21,Vlan20,0,broadcast,1,10,Yes,출입통제 SVI (passive - HSRP VIP 10.1.20.1)
+SW-DIST-A1,1,10.0.1.21,Vlan99,0,broadcast,1,10,Yes,관리 SVI (passive - HSRP VIP 10.0.1.254)
+SW-DIST-A2,1,10.0.1.22,TenGigabitEthernet1,0,point-to-point,1,10,No,코어1 업링크
+SW-DIST-A2,1,10.0.1.22,TenGigabitEthernet2,0,point-to-point,1,10,No,코어2 업링크
+SW-DIST-A2,1,10.0.1.22,Vlan10,0,broadcast,1,10,Yes,CCTV SVI (passive - HSRP VIP 10.1.10.1)
+SW-DIST-A2,1,10.0.1.22,Vlan20,0,broadcast,1,10,Yes,출입통제 SVI (passive - HSRP VIP 10.1.20.1)
+SW-DIST-A2,1,10.0.1.22,Vlan99,0,broadcast,1,10,Yes,관리 SVI (passive - HSRP VIP 10.0.1.254)
+SW-DIST-B1,1,10.0.2.21,TenGigabitEthernet1,0,point-to-point,1,10,No,코어1 업링크
+SW-DIST-B1,1,10.0.2.21,TenGigabitEthernet2,0,point-to-point,1,10,No,코어2 업링크
+SW-DIST-B1,1,10.0.2.21,Vlan10,0,broadcast,1,10,Yes,CCTV SVI (passive - HSRP VIP 10.2.10.1)
+SW-DIST-B1,1,10.0.2.21,Vlan20,0,broadcast,1,10,Yes,출입통제 SVI (passive - HSRP VIP 10.2.20.1)
+SW-DIST-B1,1,10.0.2.21,Vlan99,0,broadcast,1,10,Yes,관리 SVI (passive - HSRP VIP 10.0.2.254)

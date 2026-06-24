@@ -1,0 +1,1 @@
+policy_id,device_name,policy_name,src_intf,dst_intf,src_subnet,dst_subnet,service,action,nat_enable,nat_type,description

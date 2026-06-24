@@ -1,0 +1,8 @@
+device_name,device_type,vendor,model,mgmt_ip,mgmt_vlan,site,role,description
+R1,Router,Cisco,ISR 2901,10.10.99.1,99,test_01,WAN Router,WAN 라우터 (Primary)
+R2,Router,Cisco,ISR 2901,10.10.99.2,99,test_01,WAN Router,WAN 라우터 (Secondary)
+L3-1,L3 Switch,Cisco,Catalyst 3750,10.10.99.11,99,test_01,Distribution,L3 분배 스위치 (Primary)
+L3-2,L3 Switch,Cisco,Catalyst 3750,10.10.99.12,99,test_01,Distribution,L3 분배 스위치 (Secondary)
+CiscoL2-1,L2 Switch,Cisco,Catalyst 2960,10.10.99.21,99,test_01,Access,L2 액세스 스위치 1
+CiscoL2-2,L2 Switch,Cisco,Catalyst 2960,10.10.99.22,99,test_01,Access,L2 액세스 스위치 2
+CiscoL2-3,L2 Switch,Cisco,Catalyst 2960,10.10.99.23,99,test_01,Access,L2 액세스 스위치 3

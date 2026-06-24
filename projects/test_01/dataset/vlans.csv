@@ -1,0 +1,6 @@
+vlan_id,vlan_name,purpose,site,description
+10,VLAN_USER,User,test_01,사용자 단말 VLAN
+20,VLAN_SERVER,Server,test_01,서버 VLAN
+30,VLAN_VOICE,Voice,test_01,VoIP 전화기 VLAN
+99,VLAN_MGMT,Management,test_01,장비 관리용 VLAN
+999,VLAN_NATIVE,Native,test_01,트렁크 네이티브 VLAN (미사용)

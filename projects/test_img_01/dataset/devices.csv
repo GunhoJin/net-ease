@@ -1,0 +1,4 @@
+device_name,device_type,vendor,model,mgmt_ip,mgmt_subnet_mask,mgmt_vlan,site,role,description
+switch_01,switch,Cisco,,192.168.100.1,255.255.255.0,100,,,auto: switch conf=0.898
+switch_multilayer_02,layer3_switch,Cisco,,192.168.100.2,255.255.255.0,100,,,auto: switch_multilayer conf=0.828
+switch_multilayer_07,layer3_switch,Cisco,,192.168.100.3,255.255.255.0,100,,,auto: switch_multilayer conf=0.184

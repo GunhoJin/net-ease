@@ -1,0 +1,21 @@
+link_id,device_a,port_a,device_b,port_b,link_type,speed,description
+L01,FW-EDGE-01,port3,SW-CORE-01,Gi1/0/1,Fiber,10G,FW1-코어1 Primary 연결
+L02,FW-EDGE-01,port4,SW-CORE-02,Gi1/0/1,Fiber,10G,FW1-코어2 Secondary 연결
+L03,FW-EDGE-02,port3,SW-CORE-01,Gi1/0/2,Fiber,10G,FW2-코어1 Secondary 연결
+L04,FW-EDGE-02,port4,SW-CORE-02,Gi1/0/2,Fiber,10G,FW2-코어2 Primary 연결
+L05,FW-EDGE-01,port-ha,FW-EDGE-02,port-ha,Copper,1G,방화벽 HA Heartbeat 링크
+L06,SW-CORE-01,Te1/0/1,SW-CORE-02,Te1/0/1,Fiber,10G,코어 VSS 피어링크 (이중화)
+L07,SW-CORE-01,Te1/0/2,SW-DIST-A1,Te1,Fiber,10G,코어1-A동분배1 Primary
+L08,SW-CORE-02,Te1/0/2,SW-DIST-A1,Te2,Fiber,10G,코어2-A동분배1 이중화
+L09,SW-CORE-01,Te1/0/3,SW-DIST-A2,Te1,Fiber,10G,코어1-A동분배2 Primary
+L10,SW-CORE-02,Te1/0/3,SW-DIST-A2,Te2,Fiber,10G,코어2-A동분배2 이중화
+L11,SW-DIST-A1,Te3,SW-DIST-A2,Te3,Fiber,10G,A동 분배 계층 간 연결
+L12,SW-CORE-01,Te1/0/4,SW-DIST-B1,Te1,Fiber,10G,코어1-B동분배1 Primary
+L13,SW-CORE-02,Te1/0/4,SW-DIST-B1,Te2,Fiber,10G,코어2-B동분배1 이중화
+L14,SW-CORE-01,Te1/0/5,SW-DIST-B2,Te1,Fiber,10G,코어1-B동분배2 Primary
+L15,SW-CORE-02,Te1/0/5,SW-DIST-B2,Te2,Fiber,10G,코어2-B동분배2 이중화
+L16,SW-DIST-B1,Te3,SW-DIST-B2,Te3,Fiber,10G,B동 분배 계층 간 연결
+L17,SW-DIST-A1,Gi1,SW-ACC-A1F,Gi1,Copper,1G,A동 1층 액세스 연결
+L18,SW-DIST-A2,Gi1,SW-ACC-A2F,Gi1,Copper,1G,A동 2층 액세스 연결
+L19,SW-DIST-B1,Gi1,SW-ACC-B1F,Gi1,Copper,1G,B동 1층 액세스 연결
+L20,SW-DIST-B2,Gi1,SW-ACC-B2F,Gi1,Copper,1G,B동 2층 액세스 연결

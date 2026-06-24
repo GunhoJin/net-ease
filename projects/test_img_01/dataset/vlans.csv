@@ -1,0 +1,3 @@
+vlan_id,vlan_name,purpose,site,description
+100,Management,management,,auto: 192.168.100.0/24
+200,Data,data,,auto: 10.0.0.0/24

@@ -1,0 +1,6 @@
+device_name,device_type,vendor,model,mgmt_ip,mgmt_subnet_mask,mgmt_vlan,site,role,description
+CiscoL2-1,,,,,,,,,
+L3-1,,,,,,,,,
+L3-2,,,,,,,,,
+CiscoL2-2,,,,,,,,,
+R1,,,,,,,,,

@@ -1,0 +1,36 @@
+device_name,config_type,vlan_id,interface_name,ip_address,subnet_mask,gateway_redundancy_mode,hsrp_vrrp_vip,priority,routing_protocol,destination_network,next_hop,description
+SW-DIST-A1,ROUTED_INTF,,TenGigabitEthernet1,10.0.254.2,255.255.255.252,,,, OSPF,,,코어1 업링크 (/30 라우티드 인터페이스)
+SW-DIST-A1,ROUTED_INTF,,TenGigabitEthernet2,10.0.254.6,255.255.255.252,,,,OSPF,,,코어2 업링크 (/30 라우티드 인터페이스)
+SW-DIST-A1,SVI,10,Vlan10,10.1.10.2,255.255.255.0,HSRP,10.1.10.1,110,OSPF,,,A동 CCTV 게이트웨이 (HSRP Active)
+SW-DIST-A1,SVI,20,Vlan20,10.1.20.2,255.255.255.0,HSRP,10.1.20.1,110,OSPF,,,A동 출입통제 게이트웨이 (HSRP Active)
+SW-DIST-A1,SVI,99,Vlan99,10.0.1.21,255.255.255.0,HSRP,10.0.1.254,110,OSPF,,,A동 관리 게이트웨이 (HSRP Active)
+SW-DIST-A2,ROUTED_INTF,,TenGigabitEthernet1,10.0.254.10,255.255.255.252,,,,OSPF,,,코어1 업링크 (/30 라우티드 인터페이스)
+SW-DIST-A2,ROUTED_INTF,,TenGigabitEthernet2,10.0.254.14,255.255.255.252,,,,OSPF,,,코어2 업링크 (/30 라우티드 인터페이스)
+SW-DIST-A2,SVI,10,Vlan10,10.1.10.3,255.255.255.0,HSRP,10.1.10.1,100,OSPF,,,A동 CCTV 게이트웨이 (HSRP Standby)
+SW-DIST-A2,SVI,20,Vlan20,10.1.20.3,255.255.255.0,HSRP,10.1.20.1,100,OSPF,,,A동 출입통제 게이트웨이 (HSRP Standby)
+SW-DIST-A2,SVI,99,Vlan99,10.0.1.22,255.255.255.0,HSRP,10.0.1.254,100,OSPF,,,A동 관리 게이트웨이 (HSRP Standby)
+SW-DIST-B1,ROUTED_INTF,,TenGigabitEthernet1,10.0.254.18,255.255.255.252,,,,OSPF,,,코어1 업링크 (/30 라우티드 인터페이스)
+SW-DIST-B1,ROUTED_INTF,,TenGigabitEthernet2,10.0.254.22,255.255.255.252,,,,OSPF,,,코어2 업링크 (/30 라우티드 인터페이스)
+SW-DIST-B1,SVI,10,Vlan10,10.2.10.2,255.255.255.0,HSRP,10.2.10.1,110,OSPF,,,B동 CCTV 게이트웨이 (단독 Active)
+SW-DIST-B1,SVI,20,Vlan20,10.2.20.2,255.255.255.0,HSRP,10.2.20.1,110,OSPF,,,B동 출입통제 게이트웨이 (단독 Active)
+SW-DIST-B1,SVI,99,Vlan99,10.0.2.21,255.255.255.0,HSRP,10.0.2.254,110,OSPF,,,B동 관리 게이트웨이 (단독 Active)
+SW-CORE-01,ROUTED_INTF,,GigabitEthernet1/0/1,10.0.255.2,255.255.255.252,,,,OSPF,,,FW-EDGE-01 다운링크
+SW-CORE-01,ROUTED_INTF,,GigabitEthernet1/0/2,10.0.255.10,255.255.255.252,,,,OSPF,,,FW-EDGE-02 다운링크
+SW-CORE-01,ROUTED_INTF,,TenGigabitEthernet1/0/1,10.0.255.17,255.255.255.252,,,,OSPF,,,코어2 VSS 피어링크
+SW-CORE-01,ROUTED_INTF,,TenGigabitEthernet1/0/2,10.0.254.1,255.255.255.252,,,,OSPF,,,SW-DIST-A1 업링크
+SW-CORE-01,ROUTED_INTF,,TenGigabitEthernet1/0/3,10.0.254.9,255.255.255.252,,,,OSPF,,,SW-DIST-A2 업링크
+SW-CORE-01,ROUTED_INTF,,TenGigabitEthernet1/0/4,10.0.254.17,255.255.255.252,,,,OSPF,,,SW-DIST-B1 업링크
+SW-CORE-01,SVI,99,Vlan99,10.0.0.11,255.255.255.0,,,,OSPF,,,코어1 관리 SVI
+SW-CORE-01,SVI,100,Vlan100,10.0.100.1,255.255.255.0,,,,OSPF,,,서버팜 SVI (코어 직결)
+SW-CORE-02,ROUTED_INTF,,GigabitEthernet1/0/1,10.0.255.6,255.255.255.252,,,,OSPF,,,FW-EDGE-01 다운링크
+SW-CORE-02,ROUTED_INTF,,GigabitEthernet1/0/2,10.0.255.14,255.255.255.252,,,,OSPF,,,FW-EDGE-02 다운링크
+SW-CORE-02,ROUTED_INTF,,TenGigabitEthernet1/0/1,10.0.255.18,255.255.255.252,,,,OSPF,,,코어1 VSS 피어링크
+SW-CORE-02,ROUTED_INTF,,TenGigabitEthernet1/0/2,10.0.254.5,255.255.255.252,,,,OSPF,,,SW-DIST-A1 업링크
+SW-CORE-02,ROUTED_INTF,,TenGigabitEthernet1/0/3,10.0.254.13,255.255.255.252,,,,OSPF,,,SW-DIST-A2 업링크
+SW-CORE-02,ROUTED_INTF,,TenGigabitEthernet1/0/4,10.0.254.21,255.255.255.252,,,,OSPF,,,SW-DIST-B1 업링크
+SW-CORE-02,SVI,99,Vlan99,10.0.0.12,255.255.255.0,,,,OSPF,,,코어2 관리 SVI
+SW-CORE-02,SVI,100,Vlan100,10.0.100.2,255.255.255.0,,,,OSPF,,,서버팜 SVI (코어 직결)
+FW-EDGE-01,ROUTED_INTF,,port3,10.0.255.1,255.255.255.252,,,,OSPF,,,코어1 연결 내부 인터페이스
+FW-EDGE-01,ROUTED_INTF,,port4,10.0.255.5,255.255.255.252,,,,OSPF,,,코어2 연결 내부 인터페이스
+FW-EDGE-02,ROUTED_INTF,,port3,10.0.255.9,255.255.255.252,,,,OSPF,,,코어1 연결 내부 인터페이스
+FW-EDGE-02,ROUTED_INTF,,port4,10.0.255.13,255.255.255.252,,,,OSPF,,,코어2 연결 내부 인터페이스
