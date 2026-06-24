@@ -131,7 +131,7 @@ pip install pandas easyocr ultralytics opencv-python torch pillow
 ### YOLO 모델
 
 `VS_Code/best.pt` 경로에 커스텀 학습된 네트워크 장비 검출 모델을 배치합니다.  
-(Router / L2 Switch / L3 Switch 3-class YOLOv8 모델)
+(Router / L2 Switch / L3 Switch 3-class YOLOv26 모델)
 
 > `VS_Code/` 폴더는 프로젝트 루트 또는 부모 디렉터리에 위치하면 자동으로 탐색합니다.
 
