@@ -7,13 +7,14 @@ __pycache__/
 _[!_]*.py
 *.ipynb
 
-# 이미지 / 바이너리
+# 이미지 / 바이너리 (docs/screenshots/ 는 README용이라 추적)
 *.bmp
-*.png
 *.jpg
 *.jpeg
 *.zip
 *.pt
+*.png
+!docs/screenshots/*.png
 
 # 생성 결과물
 output/
