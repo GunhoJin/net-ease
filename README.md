@@ -151,6 +151,29 @@ python main.py
 
 ---
 
+## F5 BIG-IP 정보 수집 (`f5_collector.py`)
+
+SSH로 F5에 접속해 tmsh/bash 명령 결과를 파일로 저장합니다. (`pip install paramiko`)
+
+```bash
+# 단일/복수 장비 (비밀번호 프롬프트)
+python f5_collector.py --host 10.0.0.10 10.0.0.11 -u admin
+
+# 장비 목록 CSV + 사용자 명령 파일, 동시 5대
+cp f5_devices.example.csv f5_devices.csv   # f5_devices.csv 는 .gitignore 대상
+python f5_collector.py --inventory f5_devices.csv -c f5_commands.example.txt -w 5
+```
+
+| 항목 | 내용 |
+|------|------|
+| 로그인 쉘 | 자동 감지 — bash(root) → `tmsh -q -c`, tmsh(admin) → 직접 실행 |
+| bash 명령 | 명령 파일에 `bash: df -h` 형식 (tmsh 쉘이면 `run util bash -c`) |
+| 비밀번호 | CSV `password` → 환경변수 `F5_PASSWORD` → 프롬프트 순 |
+| 결과 | `output/f5/<시각>/<장비>/NN_<명령>.txt`, `_all.txt`, `summary.csv` |
+| summary.csv | hostname, version, build, platform, serial, failover, sync 상태 |
+
+---
+
 ## 프로젝트 구조
 
 ```

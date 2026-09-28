@@ -1,0 +1,3 @@
+name,host,port,username,password
+LB-01,10.0.0.10,22,admin,
+LB-02,10.0.0.11,22,admin,

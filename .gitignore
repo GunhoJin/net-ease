@@ -31,3 +31,6 @@ _new_model*.png
 
 # VS Code
 .vscode/
+
+# F5 수집기: 실제 장비 목록(계정정보 포함 가능)
+f5_devices.csv

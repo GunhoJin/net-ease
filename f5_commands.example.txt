@@ -1,0 +1,14 @@
+# F5 수집 명령 목록 (한 줄에 1개, '#' 주석)
+# 기본은 tmsh 명령, 'bash:' 접두어는 bash 명령으로 실행
+show sys version
+show sys hardware
+list sys global-settings hostname
+show cm failover-status
+show cm sync-status
+list net self
+list net vlan
+list net route
+list ltm virtual
+show ltm pool members
+bash: df -h
+bash: uptime
